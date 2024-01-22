@@ -52,6 +52,11 @@ img {
   max-width: 100%;
 }
 
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
 h1,
 h2,
 h3,
