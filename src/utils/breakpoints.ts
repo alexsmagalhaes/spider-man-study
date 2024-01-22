@@ -1,6 +1,6 @@
 const config ="@media screen and (max-width:"
 
-export enum breakPoint {
+export enum breakPoints {
   large = `${config} ${1170 / 16}rem)`,
   desktop = `${config} ${992 / 16}rem)`,
   tablet = `${config} ${768 / 16}rem)`,
