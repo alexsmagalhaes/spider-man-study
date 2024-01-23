@@ -1,3 +1,4 @@
+
 import { breakPoints } from "@/utils/breakPoints";
 import styled from "styled-components";
 
@@ -8,6 +9,7 @@ export const NavMenu = styled.nav`
    padding: 1rem 0;
    background-color: var(--gray-dark-01);
    min-height: 4.5rem;
+   z-index: 999;
 
       a{
          transition: all 250ms ease;
