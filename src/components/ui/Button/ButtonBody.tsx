@@ -1,7 +1,7 @@
 // ButtonBody.tsx
 
 import { ReactNode } from "react";
-import { ButtonBodyStyle, Size, Type} from "./ButtonBody.styles";
+import { ButtonBodyStyle, Size, Type } from "./ButtonBody.styles";
 
 export interface ButtonBodyProps {
    children: ReactNode;
@@ -9,7 +9,7 @@ export interface ButtonBodyProps {
    type?: Type;
 }
 
-export function ButtonBody({ children, size, type}: ButtonBodyProps): JSX.Element {
+export function ButtonBody({ children, size, type }: ButtonBodyProps): JSX.Element {
    return (
       <ButtonBodyStyle size={size} type={type}>
          {children}

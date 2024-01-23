@@ -17,7 +17,7 @@ export const sizeValues = {
    },
 };
 
-export type Type = 'primary' | 'secondary' | 'ghost' | 'link';
+export type Type = 'primary' | 'secondary';
 
 export type ButtonStyleType = {
    borderColor: string;
@@ -32,54 +32,42 @@ export type ButtonStyleType = {
 
 export const typeValues: Record<Type, ButtonStyleType> = {
    primary: {
-      borderColor: 'yourBorderColor',
-      bgColor: 'yourBgColor',
-      textColor: 'yourTextColor',
+      borderColor: 'var(--orange-03)',
+      bgColor: 'var(--orange-03)',
+      textColor: 'var(--white-defult)',
       hover: {
-         borderColor: 'yourHoverBorderColor',
-         bgColor: 'yourHoverBgColor',
-         textColor: 'yourHoverTextColor',
+         borderColor: 'var(--orange-01)',
+         bgColor: 'var(--orange-01)',
+         textColor: 'var(--white-defult)',
       },
    },
    secondary: {
-      borderColor: 'yourBorderColor',
-      bgColor: 'yourBgColor',
-      textColor: 'yourTextColor',
+      borderColor: 'rgb(47, 47, 59)',
+      bgColor: 'transparent',
+      textColor: 'var(--white-defult)',
       hover: {
-         borderColor: 'yourHoverBorderColor',
-         bgColor: 'yourHoverBgColor',
-         textColor: 'yourHoverTextColor',
-      },
-   },
-   ghost: {
-      borderColor: 'yourBorderColor',
-      bgColor: 'yourBgColor',
-      textColor: 'yourTextColor',
-      hover: {
-         borderColor: 'yourHoverBorderColor',
-         bgColor: 'yourHoverBgColor',
-         textColor: 'yourHoverTextColor',
-      },
-   },
-   link: {
-      borderColor: '',
-      bgColor: '',
-      textColor: '',
-      hover: {
-         borderColor: '',
-         bgColor: '',
-         textColor: '',
+         borderColor: 'var(--white-defult)',
+         bgColor: 'var(--white-defult)',
+         textColor: 'var(--gray-dark-02)',
       },
    },
 };
+
 
 export const ButtonBodyStyle = styled.button<{ size?: Size, type?: Type }>`
 
    padding: ${({ size }) => size ? sizeValues[size]?.padding : sizeValues.medium.padding};
    border-radius: 2rem;
-   border-width: 1.25px;
+   color: ${({ type }) => type ? typeValues[type].textColor : typeValues.primary.textColor};
+   border: 1.5px solid ${({ type }) => type ? typeValues[type].borderColor : typeValues.primary.borderColor};
    background-color: ${({ type }) => type ? typeValues[type].bgColor : typeValues.primary.bgColor};
    transition: all 250ms ease;
    cursor: pointer;
+
+   &:hover{
+      color: ${({ type }) => type ? typeValues[type].hover.textColor : typeValues.primary.hover.textColor};
+      border: 1.5px solid ${({ type }) => type ? typeValues[type].hover.borderColor : typeValues.primary.hover.borderColor};
+      background-color: ${({ type }) => type ? typeValues[type].hover.bgColor : typeValues.primary.hover.bgColor};
+   }
 
 `;

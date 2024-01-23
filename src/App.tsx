@@ -1,5 +1,4 @@
 import { GlobalStyles } from "./GlobalStyled"
-import { Button } from "./components/ui/Button"
 
 import Navbar from "./layouts/Navbar"
 
@@ -8,9 +7,6 @@ function App() {
     <>
       <GlobalStyles />
       <Navbar />
-      <Button.Body>
-        <div>eerww</div>
-      </Button.Body>
     </>
   )
 }

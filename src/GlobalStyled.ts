@@ -56,6 +56,9 @@ a{
   text-decoration: none;
   color: inherit;
 }
+button{
+  font-family: inherit;
+}
 
 h1,
 h2,

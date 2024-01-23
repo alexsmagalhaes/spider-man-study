@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 import { NavMenu } from "./styles";
 
 import Logo from '@/assets/logo.svg'
+import { Button } from "@/components/ui/Button";
 
 interface linkProps {
    text: string,
@@ -39,6 +40,9 @@ function Navbar(): ReactNode {
                   })
                }
             </div>
+            <Button.Body size="small" type="secondary">
+               <Button.Text size="small">Adicionar ao carrinho</Button.Text>
+            </Button.Body>
          </div>
       </NavMenu>
    )
