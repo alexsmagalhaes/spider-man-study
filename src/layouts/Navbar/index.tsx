@@ -1,7 +1,7 @@
 import { ReactNode, useEffect, useState } from "react";
 import { NavMenu } from "./styles";
 import { Button } from "@/components/ui/Button";
-import { screenWidth } from "@/utils/breakpoints";
+import { screenWidth } from "@/utils/breakPoints";
 
 import Logo from '@/assets/logo.svg'
 
@@ -30,13 +30,13 @@ function Navbar(): ReactNode {
 
    const [buttonText, setButtonText] = useState("");
 
-   function updateButtonText() {
+   function updateComponents() {
       window.innerWidth > screenWidth.tablet ? setButtonText("Adicionar ao carrinho") : setButtonText("Comprar")
    }
 
    useEffect(() => {
-      updateButtonText();
-      window.addEventListener("resize", updateButtonText);
+      updateComponents();
+      window.addEventListener("resize", updateComponents);
    }, [])
 
    return (

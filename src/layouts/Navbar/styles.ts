@@ -1,3 +1,4 @@
+import { breakPoints } from "@/utils/breakPoints";
 import styled from "styled-components";
 
 export const NavMenu = styled.nav`
@@ -26,6 +27,10 @@ export const NavMenu = styled.nav`
             display: flex;
             align-items: center;
             gap: 3.75rem;
+
+            ${breakPoints.laptop}{
+               display: none;
+            }
             
             a{
                font-weight: 500;

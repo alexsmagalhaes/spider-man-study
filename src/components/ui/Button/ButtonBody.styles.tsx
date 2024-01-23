@@ -57,7 +57,7 @@ export const typeValues: Record<Type, ButtonStyleType> = {
 export const ButtonBodyStyle = styled.button<{ size?: Size, type?: Type }>`
 
    padding: ${({ size }) => size ? sizeValues[size]?.padding : sizeValues.medium.padding};
-   border-radius: 2rem;
+   border-radius: 12rem;
    color: ${({ type }) => type ? typeValues[type].textColor : typeValues.primary.textColor};
    border: 1.75px solid ${({ type }) => type ? typeValues[type].borderColor : typeValues.primary.borderColor};
    background-color: ${({ type }) => type ? typeValues[type].bgColor : typeValues.primary.bgColor};
