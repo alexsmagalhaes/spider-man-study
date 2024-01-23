@@ -3,7 +3,7 @@ import { ButtonTextStyles, Size } from "./ButtonText.styles"
 
 interface ButtonTextProps {
    children: ReactNode,
-   size?: Size
+   size?: Size,
 }
 
 export function ButtonText({ children, size }: ButtonTextProps): JSX.Element {

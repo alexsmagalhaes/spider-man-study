@@ -1,8 +1,15 @@
-const config ="@media screen and (max-width:"
+const config = "@media screen and (max-width:";
 
-export enum breakPoints {
-  large = `${config} ${1170 / 16}rem)`,
-  desktop = `${config} ${992 / 16}rem)`,
-  tablet = `${config} ${768 / 16}rem)`,
-  mobile = `${config} ${376 / 16}rem)`,
+export const screenWidth = {
+  large: 1170,
+  desktop: 992,
+  tablet: 768,
+  mobile: 376
+};
+
+export const breakPoints = {
+  large : `${config} ${screenWidth.large}px)`,
+  desktop : `${config} ${screenWidth.desktop}px)`,
+  tablet : `${config} ${screenWidth.tablet}px)`,
+  mobile : `${config} ${screenWidth.mobile}px)`,
 }

@@ -4,11 +4,11 @@ export type Size = 'small' | 'medium' | 'large';
 
 export const sizeValues = {
    small: {
-      padding: '0.625rem 1.5rem',
+      padding: '0.75rem 1.5rem',
       // other styles for small size
    },
    medium: {
-      padding: '0.85rem 2rem',
+      padding: '0.875rem 2rem',
       // other styles for medium size
    },
    large: {
@@ -59,14 +59,14 @@ export const ButtonBodyStyle = styled.button<{ size?: Size, type?: Type }>`
    padding: ${({ size }) => size ? sizeValues[size]?.padding : sizeValues.medium.padding};
    border-radius: 2rem;
    color: ${({ type }) => type ? typeValues[type].textColor : typeValues.primary.textColor};
-   border: 1.5px solid ${({ type }) => type ? typeValues[type].borderColor : typeValues.primary.borderColor};
+   border: 1.75px solid ${({ type }) => type ? typeValues[type].borderColor : typeValues.primary.borderColor};
    background-color: ${({ type }) => type ? typeValues[type].bgColor : typeValues.primary.bgColor};
    transition: all 250ms ease;
    cursor: pointer;
 
    &:hover{
       color: ${({ type }) => type ? typeValues[type].hover.textColor : typeValues.primary.hover.textColor};
-      border: 1.5px solid ${({ type }) => type ? typeValues[type].hover.borderColor : typeValues.primary.hover.borderColor};
+      border: 1.75px solid ${({ type }) => type ? typeValues[type].hover.borderColor : typeValues.primary.hover.borderColor};
       background-color: ${({ type }) => type ? typeValues[type].hover.bgColor : typeValues.primary.hover.bgColor};
    }
 

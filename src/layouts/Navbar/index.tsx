@@ -1,8 +1,9 @@
-import { ReactNode } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import { NavMenu } from "./styles";
+import { Button } from "@/components/ui/Button";
+import { screenWidth } from "@/utils/breakpoints";
 
 import Logo from '@/assets/logo.svg'
-import { Button } from "@/components/ui/Button";
 
 interface linkProps {
    text: string,
@@ -24,7 +25,20 @@ const links: linkProps[] = [
       link: "#"
    }
 ]
+
 function Navbar(): ReactNode {
+
+   const [buttonText, setButtonText] = useState("");
+
+   function updateButtonText() {
+      window.innerWidth > screenWidth.tablet ? setButtonText("Adicionar ao carrinho") : setButtonText("Comprar")
+   }
+
+   useEffect(() => {
+      updateButtonText();
+      window.addEventListener("resize", updateButtonText);
+   }, [])
+
    return (
       <NavMenu>
          <div className="container-medium">
@@ -41,7 +55,7 @@ function Navbar(): ReactNode {
                }
             </div>
             <Button.Body size="small" type="secondary">
-               <Button.Text size="small">Adicionar ao carrinho</Button.Text>
+               <Button.Text size="small">{buttonText}</Button.Text>
             </Button.Body>
          </div>
       </NavMenu>
