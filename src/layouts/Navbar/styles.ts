@@ -3,7 +3,7 @@ import { breakPoints } from "@/utils/breakPoints";
 import styled from "styled-components";
 
 export const NavMenu = styled.nav`
-   position: fixed;
+   position: sticky;
    width: 100%;
    top: 0;
    padding: 1rem 0;

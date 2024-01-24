@@ -1,13 +1,14 @@
 import { ReactNode } from "react";
-import { ButtonIconStyles } from "./ButtonIcon.styles";
+import { ButtonIconStyles, SizeIcon } from "./ButtonIcon.styles";
 
 interface ButtonIconProps {
    src: string,
    alt: string,
+   size: SizeIcon
 }
 
-export function ButtonIcon({ src, alt }: ButtonIconProps): ReactNode {
+export function ButtonIcon({ src, alt, size }: ButtonIconProps): ReactNode {
    return (
-      <ButtonIconStyles src={src} alt={alt} />
+      <ButtonIconStyles src={src} alt={alt} size={size}/>
    )
 }

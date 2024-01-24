@@ -1,5 +1,9 @@
-export default function Home(){
-   return(
-      <div>Home page</div>
+import { SectionHero } from "./SectionHero";
+
+export default function Home() {
+   return (
+      <>
+         <SectionHero />
+      </>
    )
 }

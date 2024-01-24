@@ -52,6 +52,16 @@ html {
 
 /* Fluid Response End */
 
+::-moz-selection {
+  color: var(--white-defult);
+  background: var(--orange-03);
+}
+
+::selection {
+  color: var(--white-defult);
+  background: var(--orange-03);
+}
+
 body {
   font-family: var(--font-body);
   font-weight: 400;

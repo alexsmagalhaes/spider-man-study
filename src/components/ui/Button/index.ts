@@ -1,10 +1,10 @@
-import { ButtonBody } from './ButtonBody'
+import { ButtonRoot } from './ButtonRoot'
 import { ButtonText } from "./ButtonText";
 import { ButtonIcon } from './ButtonIcon'
 
 
 export const Button = {
-   Body: ButtonBody,
+   Root: ButtonRoot,
    Text: ButtonText,
    Icon: ButtonIcon,
 } 

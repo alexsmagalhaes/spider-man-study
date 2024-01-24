@@ -38,6 +38,10 @@ function Navbar(): ReactNode {
    useEffect(() => {
       updateComponents();
       window.addEventListener("resize", updateComponents);
+
+      return () => {
+         window.removeEventListener("resize", updateComponents)
+      }
    }, [])
 
    return (
@@ -55,9 +59,9 @@ function Navbar(): ReactNode {
                   })
                }
             </div>
-            <Button.Body size="small" type="secondary">
+            <Button.Root size="small" type="secondary">
                <Button.Text size="small">{buttonText}</Button.Text>
-            </Button.Body>
+            </Button.Root>
          </div>
       </NavMenu>
    )

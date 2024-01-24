@@ -1,5 +1,8 @@
 import styled from "styled-components";
 
-export const ButtonIconStyles = styled.img`
-   width: 1.5rem;
+export type SizeIcon = 'small' | 'medium' | 'large' 
+
+export const ButtonIconStyles = styled.img<{size:SizeIcon}>`
+   min-width: 1.5rem;
+   min-height: 1.5rem;
 `
