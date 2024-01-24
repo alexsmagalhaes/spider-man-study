@@ -2,6 +2,7 @@ import { ReactNode, useEffect, useState } from "react";
 import { NavMenu } from "./styles";
 import { Button } from "@/components/ui/Button";
 import { screenWidth } from "@/utils/breakPoints";
+import { Link } from "react-router-dom";
 
 import Logo from '@/assets/logo.svg'
 
@@ -42,14 +43,14 @@ function Navbar(): ReactNode {
    return (
       <NavMenu>
          <div className="container-medium">
-            <a href="./">
+            <Link to="./">
                <img src={Logo} alt="Logo" />
-            </a>
+            </Link>
             <div>
                {
                   links.map(({ text, link }: linkProps, index: number) => {
                      return (
-                        <a key={`nav-link-${index}`} href={link}>{text}</a>
+                        <Link key={index} to={link}>{text}</Link>
                      )
                   })
                }
