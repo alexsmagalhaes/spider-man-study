@@ -42,7 +42,7 @@ export const ButtonRootStyle = styled.button<ButtonProps>`
       }
    `}
    
-   ${({ size }) => size === 'medium' && `
+   ${({ size }) => size === 'large' && `
       &.large {
          padding: 1rem 2.5rem;
          max-height: 3.5rem;
@@ -65,7 +65,7 @@ export const ButtonRootStyle = styled.button<ButtonProps>`
          color: var(--white-defult);
          background-color: var(--orange-01);
          border: 1.75px solid var(--orange-01);
-         outline: 0.2rem solid rgba(245, 88, 39, 0.30);
+         outline: 0.2rem solid rgba(252, 85, 34, 0.5);
       }
    `}
 

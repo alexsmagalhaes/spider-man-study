@@ -10,9 +10,14 @@ export function SectionHero() {
       <SectionHeroStyled>
          <div className="container-medium">
             <Tag textBase="Disponível para" textAuxiliar="PS5" />
-            <Button.Root size="small" type="secondary" circle={true} >
-               <Button.Icon src={IconHeart} alt="favoritar item" size="small"/>
-            </Button.Root>
+            <div>
+               <Button.Root size="large" type="primary">
+                  <Button.Text size="medium">Adicionar ao carrinho</Button.Text>
+               </Button.Root>
+               <Button.Root size="large" type="secondary" circle={true} >
+                  <Button.Icon src={IconHeart} alt="favoritar item" size="tiny" />
+               </Button.Root>
+            </div>
          </div>
       </SectionHeroStyled>
    )
