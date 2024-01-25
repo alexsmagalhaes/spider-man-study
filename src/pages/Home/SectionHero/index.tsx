@@ -20,7 +20,7 @@ export function SectionHero() {
                   <Button.Icon src={IconHeart} alt="favoritar item" size="tiny" />
                </Button.Root>
 
-               <CardVideo thumbnail={ThumbVideo01} title={"titulo"} alt={""} />
+               <CardVideo thumbnail={ThumbVideo01} title={"titulo"} alt={""} size={"medium"} />
             </div>
          </div>
       </SectionHeroStyled>

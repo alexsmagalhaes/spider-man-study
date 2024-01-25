@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { CardVideoStyled } from "./styles";
+import { CardVideoStyled, Size } from "./styles";
 
 //assets
 import IconPlay from "@/assets/play.svg"
@@ -13,22 +13,23 @@ interface CardVideoProps {
    thumbnail: string,
    alt: string,
    title: string,
+   size?: Size
 }
 
-export function CardVideo({ video, thumbnail, alt, title }: CardVideoProps): ReactNode {
+export function CardVideo({ video, thumbnail, alt, title, size }: CardVideoProps): ReactNode {
    return (
-      <CardVideoStyled>
+      <CardVideoStyled className={`${size}`}>
          <div>
-            <img className="thumbnail-image" src={thumbnail} alt="" />
-            <img className="button-play" src={IconPlay} alt="play video" />
+            <img className={`thumbnail-image ${size}`} src={thumbnail} alt={alt} />
+            <img className={`button-play ${size}`} src={IconPlay} alt="play video" />
             <div className="filter"></div>
 
-            <img className="border-image corner-1" src={IconCorner01} alt="border video" />
-            <img className="border-image corner-2" src={IconCorner02} alt="border video" />
-            <img className="border-image corner-3" src={IconCorner03} alt="border video" />
-            <img className="border-image corner-4" src={IconCorner04} alt="border video" />
+            <img className={`border-image corner-1 ${size}`}  src={IconCorner01} alt="border video" />
+            <img className={`border-image corner-2 ${size}`} src={IconCorner02} alt="border video" />
+            <img className={`border-image corner-3 ${size}`} src={IconCorner03} alt="border video" />
+            <img className={`border-image corner-4 ${size}`} src={IconCorner04} alt="border video" />
          </div>
-         <h3>{title}</h3>
+         <h3 className={`${size}`}>{title}</h3>
       </CardVideoStyled>
    )
 }

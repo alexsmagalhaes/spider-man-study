@@ -1,9 +1,14 @@
 import styled from "styled-components";
 
+export type Size = 'medium' | 'large'
+
 export const CardVideoStyled = styled.div`
-   max-width: 25rem;
    color: var(--gray-light-01);
    transition: all 250ms ease;
+
+   &.large{
+      color: var(--white-default);
+   }
 
    div{
       padding: 0.1875rem;
@@ -27,6 +32,10 @@ export const CardVideoStyled = styled.div`
          width: 100%;
          height: 13.5rem;
          object-fit: cover;
+
+         &.large{
+            height: 28.5rem;
+         }
       }
 
       .button-play{
@@ -42,6 +51,10 @@ export const CardVideoStyled = styled.div`
          z-index: 1;
          opacity: .16;
          transition: all 250ms ease;
+
+         &.large{
+            opacity: 1;
+         }
 
          &.corner-1{
             top: -0.1875rem;
@@ -78,6 +91,10 @@ export const CardVideoStyled = styled.div`
       text-transform: none;
       line-height: 1.5;
       margin-left: 0.1875rem;
+
+      &.large{
+         font-size: 1.125rem;
+      }
    }
 
    &:hover{
@@ -87,6 +104,10 @@ export const CardVideoStyled = styled.div`
          position: absolute;
          opacity: 1;
          margin-top: 0;
+
+         &.large{
+            opacity: 0;
+         }
       }
 
       .border-image{
