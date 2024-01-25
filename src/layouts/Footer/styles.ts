@@ -1,5 +1,5 @@
 
-import { breakPoints } from "@/utils/breakPoints";
+import { breakPoints } from "@/utils/media";
 import styled from "styled-components";
 
 export const FooterStyled = styled.nav`
