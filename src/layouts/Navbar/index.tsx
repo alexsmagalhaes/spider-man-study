@@ -1,7 +1,7 @@
 import { ReactNode, useEffect, useState } from "react";
 import { NavMenu } from "./styles";
 import { Button } from "@/components/ui/Button";
-import { screenWidth } from "@/utils/breakPoints";
+import { screenWidth } from "@/utils/media";
 import { Link } from "react-router-dom";
 
 import Logo from '@/assets/logo.svg'
