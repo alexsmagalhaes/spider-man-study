@@ -2,10 +2,12 @@ import { Tag } from "@/components/ui/Tag";
 import { SectionHeroStyled } from "./styles";
 import { Button } from "@/components/ui/Button";
 import { CardVideo } from "@/components/ui/CardVideo";
+import { CardBenefit } from "@/components/ui/CardBenefit";
 
 //assets
 import IconHeart from '@/assets/heart.svg'
 import ThumbVideo01 from '@/assets/thumb-01.jpg'
+import IconBenefit01 from '@/assets/benefit-icon-1.svg'
 
 export function SectionHero() {
    return (
@@ -21,6 +23,11 @@ export function SectionHero() {
                </Button.Root>
 
                <CardVideo thumbnail={ThumbVideo01} title={"titulo"} alt={""} size={"medium"} />
+               <CardBenefit
+                  icon={IconBenefit01}
+                  title="Visual incrível"
+                  description="Explore novos cenários deslumbrantes como os bairros do Queens e do Brooklyn nessa Nova York da Marvel que ganha vida de maneira espetacular."
+               />
             </div>
          </div>
       </SectionHeroStyled>
