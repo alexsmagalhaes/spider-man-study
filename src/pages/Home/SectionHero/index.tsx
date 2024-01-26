@@ -3,6 +3,7 @@ import { SectionHeroStyled } from "./styles";
 import { Button } from "@/components/ui/Button";
 import { CardVideo } from "@/components/ui/CardVideo";
 import { CardBenefit } from "@/components/ui/CardBenefit";
+import { CardOption } from "@/components/ui/CardOption";
 
 //assets
 import IconHeart from '@/assets/heart.svg'
@@ -28,6 +29,7 @@ export function SectionHero() {
                   title="Visual incrível"
                   description="Explore novos cenários deslumbrantes como os bairros do Queens e do Brooklyn nessa Nova York da Marvel que ganha vida de maneira espetacular."
                />
+               <CardOption edition="default" price="349,90" items={['Marvel’s Spider-Man 2', ]}/>
             </div>
          </div>
       </SectionHeroStyled>
