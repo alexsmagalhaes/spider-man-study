@@ -7,7 +7,7 @@ export const GlobalStyles = createGlobalStyle`
   --body-line-height: 1.5;
   --heading-line-height: 1.4;
 
-  --white-defult: #fff;
+  --white-default: #fff;
 
   --gray-light-05: #f2f2ff;
   --gray-light-04: #e6e6f2;
@@ -53,12 +53,12 @@ html {
 /* Fluid Response End */
 
 ::-moz-selection {
-  color: var(--white-defult);
+  color: var(--white-default);
   background: var(--orange-03);
 }
 
 ::selection {
-  color: var(--white-defult);
+  color: var(--white-default);
   background: var(--orange-03);
 }
 
@@ -67,7 +67,7 @@ body {
   font-weight: 400;
   line-height: var(--body-line-height);
   background-color: var(--gray-dark-01);
-  color: var(--white-defult);
+  color: var(--white-default);
 }
 
 img {
