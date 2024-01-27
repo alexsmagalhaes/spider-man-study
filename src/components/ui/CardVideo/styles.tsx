@@ -75,13 +75,7 @@ export const CardVideoStyled = styled.div`
             bottom: -0.1875rem;
             right: -0.1875rem;
          }
-
-         &:nth-child(2n+1) {
-
-         }
-
       }
-
    }
    
    h3{

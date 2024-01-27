@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/Button";
 import { CardVideo } from "@/components/ui/CardVideo";
 import { CardBenefit } from "@/components/ui/CardBenefit";
 import { CardOption } from "@/components/ui/CardOption";
+import { CardSlide } from "@/components/ui/CardSlide";
 
 //assets
 import IconHeart from '@/assets/heart.svg'
@@ -30,6 +31,7 @@ export function SectionHero() {
                   description="Explore novos cenários deslumbrantes como os bairros do Queens e do Brooklyn nessa Nova York da Marvel que ganha vida de maneira espetacular."
                />
                <CardOption edition="default" price="349,90" items={['Marvel’s Spider-Man 2', ]}/>
+               <CardSlide image={ThumbVideo01} alt={"qq"} title={"Titulo do slide"} />
             </div>
          </div>
       </SectionHeroStyled>
