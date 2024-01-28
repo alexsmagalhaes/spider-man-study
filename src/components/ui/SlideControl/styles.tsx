@@ -16,4 +16,8 @@ export const SlideControlStyled = styled.div`
       color: var(--gray-dark-01);
       outline: 0.2813rem solid rgba(255, 255, 255, 0.3);
    }
+
+   &.reverse{
+      transform: rotateZ(180deg);
+   }
 `

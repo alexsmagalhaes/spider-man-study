@@ -1,11 +1,9 @@
 import { Tag } from "@/components/ui/Tag";
 import { SectionHeroStyled } from "./styles";
 import { Button } from "@/components/ui/Button";
-import { CardVideo } from "@/components/ui/CardVideo";
 import { CardBenefit } from "@/components/ui/CardBenefit";
 import { CardOption } from "@/components/ui/CardOption";
 import { CardSlide } from "@/components/ui/CardSlide";
-import { SlideControl } from "@/components/ui/SlideControl";
 
 //assets
 import IconHeart from '@/assets/heart.svg'
@@ -25,7 +23,7 @@ export function SectionHero() {
                   <Button.Icon src={IconHeart} alt="favoritar item" size="tiny" />
                </Button.Root>
 
-               <CardVideo thumbnail={ThumbVideo01} title={"titulo"} alt={""} size={"medium"} />
+              
                <CardBenefit
                   icon={IconBenefit01}
                   title="Visual incrível"
@@ -33,7 +31,6 @@ export function SectionHero() {
                />
                <CardOption edition="default" price="349,90" items={['Marvel’s Spider-Man 2', ]}/>
                <CardSlide image={ThumbVideo01} alt={"qq"} title={"Titulo do slide"} />
-               <SlideControl />
             </div>
          </div>
       </SectionHeroStyled>
