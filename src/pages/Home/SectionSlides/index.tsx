@@ -70,6 +70,7 @@ export function SectionSlider(): ReactNode {
                navigation={{
                   prevEl: prevRef.current,
                   nextEl: nextRef.current,
+                  disabledClass: 'disable',
                }}
                onBeforeInit={() => setInit(true)}
             >
