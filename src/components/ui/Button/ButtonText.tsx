@@ -2,7 +2,7 @@ import { ReactNode } from "react"
 import { ButtonTextStyles, Size } from "./ButtonText.styles"
 
 interface ButtonTextProps {
-   children: ReactNode,
+   children: ReactNode | string,
    size?: Size,
 }
 

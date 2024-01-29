@@ -7,7 +7,7 @@ export const GlobalStyles = createGlobalStyle`
   --body-line-height: 1.5;
   --heading-line-height: 1.4;
 
-  --white-defult: #fff;
+  --white-default: #fff;
 
   --gray-light-05: #f2f2ff;
   --gray-light-04: #e6e6f2;
@@ -53,12 +53,12 @@ html {
 /* Fluid Response End */
 
 ::-moz-selection {
-  color: var(--white-defult);
+  color: var(--white-default);
   background: var(--orange-03);
 }
 
 ::selection {
-  color: var(--white-defult);
+  color: var(--white-default);
   background: var(--orange-03);
 }
 
@@ -67,7 +67,7 @@ body {
   font-weight: 400;
   line-height: var(--body-line-height);
   background-color: var(--gray-dark-01);
-  color: var(--white-defult);
+  color: var(--white-default);
 }
 
 img {
@@ -87,29 +87,36 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
   font-family: var(--font-heading);
-  font-weight: bold;
+  font-weight: 600;
   line-height: var(--heading-line-height);
   text-transform: uppercase;
 }
 
-h1 {
+h1, .h1 {
   font-size: 3.5rem;
+  font-weight: bold;
 }
-h2 {
+h2, .h2 {
   font-size: 3rem;
 }
-h3 {
+h3, .h3 {
   font-size: 2.5rem;
 }
-h4 {
+h4, .h4 {
   font-size: 2rem;
 }
-h5 {
+h5, .h5 {
   font-size: 1.5rem;
 }
-h6 {
+h6, .h6 {
   font-size: 1.25rem;
 }
 

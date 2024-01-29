@@ -56,13 +56,13 @@ export const ButtonRootStyle = styled.button<ButtonProps>`
    `}
 
    ${({ type }) => type === 'primary' && `
-      color: var(--white-defult);
+      color: var(--white-default);
       background-color: var(--orange-03);
       border: 1.75px solid var(--orange-03);
       outline: 0rem solid rgba(245, 88, 39, 0.30);
 
       &:hover {
-         color: var(--white-defult);
+         color: var(--white-default);
          background-color: var(--orange-01);
          border: 1.75px solid var(--orange-01);
          outline: 0.2rem solid rgba(252, 85, 34, 0.5);
@@ -70,14 +70,14 @@ export const ButtonRootStyle = styled.button<ButtonProps>`
    `}
 
    ${({ type }) => type === 'secondary' && `
-      color: var(--white-defult);
+      color: var(--white-default);
       background-color: transparent;
       border: 1.75px solid rgb(47, 47, 59);
       outline: 0rem solid transparent;
 
       &:hover {
          color: var(--gray-dark-02);
-         background-color: var(--white-defult);
+         background-color: var(--white-default);
          border: 1.75px solid rgb(47, 47, 59);
          outline: 0.2rem solid rgba(255, 255, 255, 0.30);
       }

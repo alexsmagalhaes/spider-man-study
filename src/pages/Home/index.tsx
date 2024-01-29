@@ -1,9 +1,9 @@
-import { SectionHero } from "./SectionHero";
+import { SectionSlider } from "./SectionSlides";
 
 export default function Home() {
    return (
       <>
-         <SectionHero />
+         <SectionSlider />
       </>
    )
 }
