@@ -2,6 +2,7 @@ import { ReactNode, useRef, useState } from "react";
 import { SectionSliderStyled } from "./styles";
 import { CardVideo } from "@/components/ui/CardVideo";
 import { SlideControl } from "@/components/ui/SlideControl";
+import { SlidePagination } from "@/components/ui/SlidePagination";
 
 //assets
 import ThumbVideo01 from '@/assets/thumb-01.jpg'
@@ -10,9 +11,8 @@ import ThumbVideo03 from '@/assets/thumb-03.jpg'
 import ThumbVideo04 from '@/assets/thumb-04.jpg'
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from 'swiper/modules'
+import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css'
-import 'swiper/css/navigation'
 
 interface slideItemsProps {
    thumbnail: string,
@@ -42,32 +42,43 @@ export function SectionSlider(): ReactNode {
    const prevRef = useRef(null);
    const nextRef = useRef(null);
 
+   const classPagination = 'swiper-pagination'
+
    return (
       <SectionSliderStyled>
          <div className="container-medium">
             <div className="home-slider_heading">
                <h2 className="h5">Últimos vídeos</h2>
-               <div></div>
+               <SlidePagination className={classPagination} />
             </div>
+   
             <Swiper
                className="swiper_slide-wrapper"
                spaceBetween={28}
                slidesPerView={"auto"}
                speed={800}
 
-               modules={[Navigation]}
+               pagination={{
+                  el: `.${classPagination}`,
+                  clickable: true,
+                  renderBullet: (_, className) => {
+                     return '<span class="' + className + '"></span>';
+                  },
+               }}
+
+               modules={[Navigation, Pagination]}
                navigation={{
                   prevEl: prevRef.current,
                   nextEl: nextRef.current,
                }}
-               onInit={() => setInit(true)}
+               onBeforeInit={() => setInit(true)}
             >
                <div className="slide-trailers_control is-01" ref={prevRef}>
                   <SlideControl />
-                  </div>
+               </div>
                <div className="slide-trailers_control is-02" ref={nextRef}>
-                  <SlideControl reverse/>
-                  </div>
+                  <SlideControl reverse />
+               </div>
                {
                   slidesItems.map(({ thumbnail, title, }: slideItemsProps, index: number) => {
                      return (
