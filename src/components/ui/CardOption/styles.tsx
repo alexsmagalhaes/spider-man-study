@@ -65,7 +65,7 @@ export const CardOptionStyled = styled.div`
       }
    }
 
-   .edition_title .h5{
+   .edition_title.h5{
       margin-top: 2.25rem;
       color: var(--white-default);
    }
@@ -73,6 +73,14 @@ export const CardOptionStyled = styled.div`
    ul{
       padding-left: 1rem;
       color: var(--gray-light-04);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: auto;
+
+      li{
+         font-size: 0.875rem;
+      }
    }
 
    .edition_footer{

@@ -15,8 +15,8 @@ export const SectionEditionsStyled = styled.section`
          margin-bottom: 1rem;
       }
 
-      h3{
-         margin-bottom: 1rem;
+      .subhead{
+         margin-bottom: 2rem;
          color: var(--gray-light-01);
       }
 
