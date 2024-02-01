@@ -5,8 +5,8 @@ import { SectionSlider } from "./SectionSlides";
 export default function Home() {
    return (
       <>
-         <SectionEditions />
          <SectionSlider />
+         <SectionEditions />
          <SectionBenefits />
       </>
    )

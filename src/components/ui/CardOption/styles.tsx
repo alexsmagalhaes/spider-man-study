@@ -65,8 +65,9 @@ export const CardOptionStyled = styled.div`
       }
    }
 
-   .edition_title{
+   .edition_title .h5{
       margin-top: 2.25rem;
+      color: var(--white-default);
    }
 
    ul{
@@ -79,6 +80,10 @@ export const CardOptionStyled = styled.div`
       flex-direction: column;
       align-items: flex-start;
       gap: 1.5rem;
+
+      h3{
+         color: var(--white-default);
+      }
 
       .edition_buttons{
          display: flex;

@@ -25,6 +25,7 @@ export const SectionSliderStyled = styled.section`
          z-index: 1;
          top: 6.75rem;
          transform: translateY(-25%);
+         transition: all 250ms ease;
 
          &.is-01{
             transform: translateX(-25%);
@@ -37,7 +38,8 @@ export const SectionSliderStyled = styled.section`
          }
 
          &.disable{
-            display: none;
+            opacity: 0;
+            pointer-events: none;
          }
       }
    }
