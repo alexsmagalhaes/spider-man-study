@@ -146,6 +146,4 @@ h6, .h6 {
   margin: 0 auto;
   width: 100%;
 }
-
-
 `;
