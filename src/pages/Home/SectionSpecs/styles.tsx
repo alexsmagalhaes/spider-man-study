@@ -3,7 +3,11 @@ import styled from "styled-components";
 export const SectionSpecsStyled = styled.section`
    padding: 7rem 0;
 
-   div{
+   .container-medium{
+      display: flex;
+      gap: 2.5rem;
+      justify-content: space-between;
+      align-items: center;
       
       .home-specs_heading{
          max-width: 28rem;
@@ -33,7 +37,9 @@ export const SectionSpecsStyled = styled.section`
       }
 
       .home-specs_price-block{
-
+         display: flex;
+         gap: 1.75rem;
+         max-width: 44.25rem;
 
          .home-specs_card-spider{
             position: relative;

@@ -12,7 +12,7 @@ export function CardPrice(): ReactNode {
       <CardPriceStyled>
          <div className="price-card_heading">
             <Tag textBase="Disponível para" textAuxiliar="PS5" />
-            <h3>Marvel's Spider-Man 2</h3>
+            <h3>Marvel's <br/> Spider-Man 2</h3>
             <p>Sony Interactive Entertainment</p>
          </div>
          <div className="price-card_footer">
