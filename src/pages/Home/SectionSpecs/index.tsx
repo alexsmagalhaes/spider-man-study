@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import { SectionSpecsStyled } from "./styles";
 import { CardPrice } from "./components/CardPrice";
+import { TagRelese } from "./components/TagRelese";
 
 //assets
 import SpiderManImage from '@/assets/specs-spider-image.jpg'
@@ -38,11 +39,13 @@ export function SectionSpecs(): ReactNode {
                      })
                   }
                </div>
+               <TagRelese />
             </div>
             <div className="home-specs_price-block">
                <CardPrice />
                <div className="home-specs_card-spider">
                   <img className="home-specs_card-spider-image" src={SpiderManImage} alt="spider-man" />
+                  {/* <div className="home-specs_card-spider-filter"></div> */}
                   <img className="home-specs_card-spider-logo" src={Logo} alt="spider-man logo" />
                </div>
             </div>

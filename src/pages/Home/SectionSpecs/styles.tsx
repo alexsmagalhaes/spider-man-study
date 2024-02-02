@@ -10,7 +10,10 @@ export const SectionSpecsStyled = styled.section`
       align-items: center;
       
       .home-specs_heading{
-         max-width: 28rem;
+         max-width: 26rem;
+         display: flex;
+         flex-direction: column;
+         align-items: start;
 
          .home-specs_heading-list{
             margin-top: 2rem;
@@ -22,8 +25,9 @@ export const SectionSpecsStyled = styled.section`
             justify-content: center;
 
             .home-specs_heading-list-row{
+               width: 100%;
                display: grid; 
-               grid-template-columns: 44% 56%; 
+               grid-template-columns: 40% 60%; 
                grid-template-rows: 1fr; 
 
                .home-specs_heading-col-1{
@@ -38,7 +42,7 @@ export const SectionSpecsStyled = styled.section`
 
       .home-specs_price-block{
          display: flex;
-         gap: 1.75rem;
+         gap: 2rem;
          max-width: 44.25rem;
 
          .home-specs_card-spider{
@@ -49,11 +53,22 @@ export const SectionSpecsStyled = styled.section`
 
             .home-specs_card-spider-image{
                object-fit: cover;
+               opacity: 0.56;
             }
+
+            /* .home-specs_card-spider-filter{
+               position: absolute;
+               z-index: 1;
+               width: 100%;
+               height: 100%;
+               background: linear-gradient(rgba(0,0,0,0.), rgba(0,0,0,0.6));
+            } */
 
             .home-specs_card-spider-logo{
                position: absolute;
-               bottom: 4rem;
+               bottom: 3.25rem;
+               max-width: 6.125rem;
+               z-index: 2;
             }
          }
       }

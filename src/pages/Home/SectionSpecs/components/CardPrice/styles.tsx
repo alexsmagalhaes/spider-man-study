@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const CardPriceStyled = styled.div`
-   padding: 2.25rem 2.5rem;
+   padding: 2.5rem 2.25rem;
    border: 0.0938rem solid var(--gray-dark-05);
    position: relative;
    display: flex;
@@ -20,7 +20,7 @@ export const CardPriceStyled = styled.div`
 
       p{
          font-size: 1.125rem;
-         color: var(--gray-light-03);
+         color: var(--gray-light-02);
       }
    }
 

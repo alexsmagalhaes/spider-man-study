@@ -18,10 +18,10 @@ export function CardPrice(): ReactNode {
          <div className="price-card_footer">
             <span className="h4">R$ 349,90</span>
             <div className="price-card_buttons">
-               <Button.Root size="medium" type="primary">
+               <Button.Root size="large" type="primary">
                   <Button.Text size="medium">{'adicionar ao carrinho'}</Button.Text>
                </Button.Root>
-               <Button.Root size="medium" type="secondary" circle={true} >
+               <Button.Root size="large" type="secondary" circle={true} >
                   <Button.Icon src={IconHeart} alt="favoritar item" size="tiny" />
                </Button.Root>
             </div>
