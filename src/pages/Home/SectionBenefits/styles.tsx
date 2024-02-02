@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const SectionBenefitsStyled = styled.section`
-   padding: 7.25rem 0;
+   padding: 7.5rem 0;
    
    .home-benefits_heading{
       margin-bottom: 2.5rem;

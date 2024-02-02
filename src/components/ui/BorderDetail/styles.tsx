@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const BorderDetailStyled = styled.div`
       position: absolute;
-      z-index: 1;
       width: calc(100% + 0.5rem);
       height: calc(100% + 0.5rem);
       pointer-events: none;

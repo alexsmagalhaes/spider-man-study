@@ -96,8 +96,7 @@ export const CardOptionStyled = styled.div`
       .edition_buttons{
          display: flex;
          align-items: flex-start;
-         gap: 1.375rem;
-         
+         gap: 1.375rem;  
       }
    }
 `
