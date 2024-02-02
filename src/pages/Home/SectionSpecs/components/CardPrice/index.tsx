@@ -10,14 +10,14 @@ import IconHeart from '@/assets/heart.svg'
 export function CardPrice(): ReactNode {
    return (
       <CardPriceStyled>
-         <div>
+         <div className="price-card_heading">
             <Tag textBase="Disponível para" textAuxiliar="PS5" />
             <h3>Marvel's Spider-Man 2</h3>
             <p>Sony Interactive Entertainment</p>
          </div>
-         <div>
+         <div className="price-card_footer">
             <span className="h4">R$ 349,90</span>
-            <div className="edition_buttons">
+            <div className="price-card_buttons">
                <Button.Root size="medium" type="primary">
                   <Button.Text size="medium">{'adicionar ao carrinho'}</Button.Text>
                </Button.Root>

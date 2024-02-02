@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/Button";
 
 //assets
 import ImageCard from '@/assets/benefits-spider.png'
-import Logo from '@/assets/logo.svg'
+import Logo from '@/assets/logo-vertical.svg'
 
 export function CardSpiderMan(): ReactNode {
    return (
