@@ -4,6 +4,7 @@ import { SectionEditions } from "./SectionEditions";
 import { SectionGameplay } from "./SectionGameplay";
 import { SectionSlider } from "./SectionSlides";
 import { SectionSpecs } from "./SectionSpecs";
+import { SectionIntroduce } from "./SectionIntroduce";
 
 //assets
 import Divider02 from '@/assets/line-2.svg'
@@ -13,6 +14,7 @@ export default function Home() {
    return (
       <>
          <SectionSlider />
+         <SectionIntroduce />
          <SectionEditions />
          <DividerBlock image={Divider03}/>
          <SectionBenefits />
