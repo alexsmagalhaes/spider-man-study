@@ -146,4 +146,37 @@ h6, .h6 {
   margin: 0 auto;
   width: 100%;
 }
+
+/* ScrollBar Custom */
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #2F2F3B #1B1B21;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  height: 0.25rem;
+  width: 0.25rem;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: #1B1B21;
+  border-radius: 1.25rem;
+}
+
+*::-webkit-scrollbar-track:hover,
+*::-webkit-scrollbar-track:active {
+  background-color: #25252E;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #2F2F3B;
+  border-radius: 1.25rem;
+}
+
+*::-webkit-scrollbar-thumb:hover,
+*::-webkit-scrollbar-thumb:active {
+  background-color: #525266;
+}
 `;
