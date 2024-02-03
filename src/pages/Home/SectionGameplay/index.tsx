@@ -63,7 +63,6 @@ export function SectionGameplay(): ReactNode {
                grabCursor={true}
                autoHeight={true}
                centeredSlides
-               loop={true}
 
                effect={"coverflow"}
                coverflowEffect={

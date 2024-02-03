@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const SectionEditionsStyled = styled.section`
    padding: 7rem 0rem;
+   background-color: var(--gray-dark-01);
 
    .container-medium{
       display: grid;

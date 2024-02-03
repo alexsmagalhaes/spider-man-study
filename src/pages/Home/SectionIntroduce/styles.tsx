@@ -13,6 +13,7 @@ import BgImage08 from "@/assets/bg/08.png"
 
 export const SectionIntroduceStyled = styled.section`
    position: sticky;
+   z-index: -1;
    top: 0;
    height: 50rem;
    display: flex;

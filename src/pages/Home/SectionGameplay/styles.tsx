@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const SectionGameplayStyled = styled.section`
    padding-bottom: 7.5rem;
    overflow-x: hidden;
+   background-color: var(--gray-dark-01);
 
    div{
       .home-gameplay_heading {

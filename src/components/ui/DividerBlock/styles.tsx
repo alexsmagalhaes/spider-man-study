@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const DividerBlockStyled = styled.div`
+   background-color: var(--gray-dark-01);
+   
    img{
       width: 100%;
 

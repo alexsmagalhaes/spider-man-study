@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const SectionSpecsStyled = styled.section`
    padding: 7rem 0;
+   background-color: var(--gray-dark-01);
 
    .container-medium{
       display: flex;
