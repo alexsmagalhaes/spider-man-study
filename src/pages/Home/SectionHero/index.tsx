@@ -2,7 +2,8 @@ import { Tag } from "@/components/ui/Tag";
 import { SectionHeroStyled } from "./styles";
 import { Button } from "@/components/ui/Button";
 import { HeroVideoToggle } from "./components/HeroVideoToggle";
-import ReactPlayer from "react-player";
+import YouTube from "react-youtube";
+import { useState } from "react";
 
 //assets
 import IconHeart from '@/assets/heart.svg'
@@ -13,7 +14,49 @@ import IconClassification from '@/assets/classification-icon.svg'
 import CoverVideo01 from '@/assets/home-hero-video-cover-1.jpg'
 import CoverVideo02 from '@/assets/home-hero-video-cover-2.jpg'
 
+const videoOptions = {
+   height: '100%',
+   width: '100%',
+   playerVars: {
+      autoplay: 1,
+      controls: false,
+      rel: 0,
+      showinfo: 0,
+      mute: 1,
+      loop: 1,
+      start: 22,
+   }
+};
+
+interface videoListProps {
+   thumbnail: string,
+   alt: string,
+   video: string
+}
+
+const videoList: videoListProps[] = [
+   {
+      thumbnail: CoverVideo01,
+      alt: 'introdução',
+      video: 'bgqGdIoa52s'
+   }, {
+      thumbnail: CoverVideo02,
+      alt: 'gamepaly',
+      video: 'ZRhJT2nmvA4'
+   },
+]
+
 export function SectionHero() {
+   const [currentVideoButton, setCurrentVideoButton] = useState<number>(0)
+   const handleButtonVideo = (index: number) => {
+      setCurrentVideoButton(index);
+   }
+
+   const [currentVideo, setCurrentVideo] = useState<string>(videoList[0].video)
+   const handleVideo = (url: string) => {
+      setCurrentVideo(url);
+   }
+
    return (
       <SectionHeroStyled>
          <div className="container-medium">
@@ -58,18 +101,30 @@ export function SectionHero() {
                   <span>Violência<br /> Compras no jogo</span>
                </div>
                <div className="home-hero_videos">
-                  <HeroVideoToggle thumbnail={CoverVideo01} active={true} alt={"video"} />
-                  <HeroVideoToggle thumbnail={CoverVideo02} active={false} alt={"video"} />
+                  {
+                     videoList.map(({ thumbnail, alt, video }: videoListProps, index: number) => {
+                        return (
+                           <HeroVideoToggle
+                              key={`Video-hero-${index}`}
+                              thumbnail={thumbnail}
+                              active={currentVideoButton === index ? 'is-active' : ''}
+                              alt={alt}
+                              onClick={
+                                 () => {
+                                    handleButtonVideo(index)
+                                    handleVideo(video)
+                                 }
+                              }
+                           />
+                        )
+                     })
+                  }
                </div>
             </div>
          </div>
-         <ReactPlayer 
-         className="home-hero_video"
-            url='https://www.youtube.com/watch?v=bgqGdIoa52s' 
-            muted
-            width={1000}
-            height={1000}
-         />
+
+         <div className="home-hero_filter-video"></div>
+         <YouTube videoId={currentVideo} opts={videoOptions} className="home-hero_video" />
       </SectionHeroStyled>
    )
 }

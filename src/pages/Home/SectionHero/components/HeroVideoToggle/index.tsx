@@ -5,14 +5,16 @@ import { BorderDetail } from "@/components/ui/BorderDetail";
 interface HeroVideoToggleProps {
    thumbnail: string,
    alt: string,
-   active: boolean
+   active: string,
+   onClick: () => void,
 }
 
-export function HeroVideoToggle({ thumbnail, alt, active }: HeroVideoToggleProps): ReactNode {
+export function HeroVideoToggle({ thumbnail, alt, active, onClick }: HeroVideoToggleProps): ReactNode {
+
    return (
-      <HeroVideoToggleStyled className={active ? 'is-active' : ''}>
+      <HeroVideoToggleStyled className={active} onClick={onClick}>
          <div className="home-hero-toggle_filter"></div>
-         <BorderDetail className="home-hero-toggle_border"/>
+         <BorderDetail className="home-hero-toggle_border" />
          <img className="home-hero-toggle_thumb" src={thumbnail} alt={alt} />
       </HeroVideoToggleStyled>
    )

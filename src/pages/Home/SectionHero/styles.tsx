@@ -4,13 +4,30 @@ export const SectionHeroStyled = styled.header`
    position: relative;
    padding-top: 7rem;
    padding-bottom: 8.75rem;
+   overflow: hidden;
+   display: flex;
+   align-items: center;
+   justify-content: center;
 
    .home-hero_video{
       position: absolute;
-      top:0;
-      left: 0;
-      right: 0;
+      top: -20%;
+      z-index: -3;
+      width: 120%;
+      height: 120%;
+   }
+
+   .home-hero_filter-video{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
       z-index: -1;
+      background: 
+      linear-gradient(90deg, rgba(6, 6, 8, .6) 4%, rgba(6, 6, 8, 0.04) 100%),
+      linear-gradient(transparent, rgba(6, 6, 8, 1)),
+      linear-gradient(180deg, #060608 0%, rgba(6, 6, 8, 0.49) 12%, rgba(6, 6, 8, 0.00) 24%)
+      ;
    }
 
    .container-medium{
