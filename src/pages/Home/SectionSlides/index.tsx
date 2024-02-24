@@ -1,8 +1,8 @@
 import { ReactNode, useRef, useState } from "react";
 import { SectionSliderStyled } from "./styles";
 import { CardVideo } from "@/components/ui/CardVideo";
-import { SlideControl } from "@/components/ui/SlideControl";
-import { SlidePagination } from "@/components/ui/SlidePagination";
+import { SlideControl } from "@/components/swiper/SlideControl";
+import { SlidePagination } from "@/components/swiper/SlidePagination";
 
 //assets
 import ThumbVideo01 from '@/assets/thumb-01.jpg'
@@ -11,7 +11,7 @@ import ThumbVideo03 from '@/assets/thumb-03.jpg'
 import ThumbVideo04 from '@/assets/thumb-04.jpg'
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from 'swiper/modules';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css'
 
 interface slideItemsProps {
@@ -51,12 +51,15 @@ export function SectionSlider(): ReactNode {
                <h2 className="h5">Últimos vídeos</h2>
                <SlidePagination className={classPagination} />
             </div>
-   
+
             <Swiper
                className="swiper_slide-wrapper"
                spaceBetween={28}
                slidesPerView={"auto"}
                speed={800}
+               autoplay={{ delay: 4000, disableOnInteraction: true }}
+               grabCursor={true}
+               autoHeight={true}
 
                pagination={{
                   el: `.${classPagination}`,
@@ -66,10 +69,11 @@ export function SectionSlider(): ReactNode {
                   },
                }}
 
-               modules={[Navigation, Pagination]}
+               modules={[Navigation, Pagination, Autoplay]}
                navigation={{
                   prevEl: prevRef.current,
                   nextEl: nextRef.current,
+                  disabledClass: 'disable',
                }}
                onBeforeInit={() => setInit(true)}
             >

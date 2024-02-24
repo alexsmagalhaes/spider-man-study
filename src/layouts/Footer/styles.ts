@@ -26,8 +26,10 @@ export const FooterStyled = styled.nav`
       .footer_line{
          position: absolute;
          top: 0;
-         width: 100%;
-         min-width: 68rem;
+         max-width: 100%;
+         right: 1.5rem;
+         left: 1.5rem;
+         /* min-width: 68rem; */
       }
 
       .footer_content{

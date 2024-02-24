@@ -65,13 +65,22 @@ export const CardOptionStyled = styled.div`
       }
    }
 
-   .edition_title{
+   .edition_title.h5{
       margin-top: 2.25rem;
+      color: var(--white-default);
    }
 
    ul{
       padding-left: 1rem;
       color: var(--gray-light-04);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: auto;
+
+      li{
+         font-size: 0.875rem;
+      }
    }
 
    .edition_footer{
@@ -80,11 +89,14 @@ export const CardOptionStyled = styled.div`
       align-items: flex-start;
       gap: 1.5rem;
 
+      h3{
+         color: var(--white-default);
+      }
+
       .edition_buttons{
          display: flex;
          align-items: flex-start;
-         gap: 1.375rem;
-         
+         gap: 1.375rem;  
       }
    }
 `
