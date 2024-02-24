@@ -9,14 +9,14 @@ import IconCorner03 from "@/assets/border-3.svg"
 import IconCorner04 from "@/assets/border-4.svg"
 
 interface CardVideoProps {
-   video?: string,
+  // video?: string,
    thumbnail: string,
    alt: string,
    title: string,
    size?: Size
 }
 
-export function CardVideo({ video, thumbnail, alt, title, size }: CardVideoProps): ReactNode {
+export function CardVideo({ /*video,*/ thumbnail, alt, title, size }: CardVideoProps): ReactNode {
    return (
       <CardVideoStyled className={`${size}`}>
          <div>
