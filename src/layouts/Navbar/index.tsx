@@ -32,7 +32,7 @@ function Navbar(): ReactNode {
    const [buttonText, setButtonText] = useState("");
 
    function updateComponents() {
-      window.innerWidth > screenWidth.tablet ? setButtonText("Adicionar ao carrinho") : setButtonText("Comprar")
+      window.innerWidth > screenWidth.laptop ? setButtonText("Adicionar ao carrinho") : setButtonText("Comprar")
    }
 
    useEffect(() => {
@@ -47,10 +47,14 @@ function Navbar(): ReactNode {
    return (
       <NavMenu>
          <div className="container-medium">
-            <Link to="./">
-               <img src={Logo} alt="Logo" />
+            <Link to="./" className="navbar_logo-link">
+               <img 
+               className="navbar_logo"
+               src={Logo} 
+               alt="Logo" 
+               />
             </Link>
-            <div>
+            <div className="navbar_links-menu">
                {
                   links.map(({ text, link }: linkProps, index: number) => {
                      return (

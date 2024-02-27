@@ -10,39 +10,46 @@ export const NavMenu = styled.nav`
    background-color: var(--gray-dark-01);
    min-height: 4.5rem;
    z-index: 999;
+   
+   .container-medium{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 3.75rem;
 
-      a{
+      ${breakPoints.laptop}{
+            gap: 1.75rem;
+      }
+      
+      .navbar_logo-link{
          transition: all 250ms ease;
-
+   
          &:hover{
             opacity: 0.85;
          }
       }
-
-      div{
+      .navbar_links-menu{
          display: flex;
-         justify-content: space-between;
          align-items: center;
          gap: 3.75rem;
+
+         ${breakPoints.laptop}{
+            gap: 1.75rem;
+         }
          
-         div{
-            display: flex;
-            align-items: center;
-            gap: 3.75rem;
+         ${breakPoints.tablet}{
+            display: none;
+         }
+         
+         a{
+            font-weight: 500;
+            font-size: 0.875rem;
+            transition: all 250ms ease;
 
-            ${breakPoints.laptop}{
-               display: none;
-            }
-            
-            a{
-               font-weight: 500;
-               font-size: 0.875rem;
-               transition: all 250ms ease;
-
-               &:hover{
-                  color: var(--orange-03);
-               }
+            &:hover{
+               color: var(--orange-03);
             }
          }
+      }
    }
 `
