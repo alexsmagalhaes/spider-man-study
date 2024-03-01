@@ -13,6 +13,7 @@ import IconPlus from '@/assets/plus.svg'
 import IconClassification from '@/assets/classification-icon.svg'
 import CoverVideo01 from '@/assets/home-hero-video-cover-1.jpg'
 import CoverVideo02 from '@/assets/home-hero-video-cover-2.jpg'
+import { screenWidth } from "@/utils/media";
 
 const videoOptions = {
    height: '100%',
@@ -100,26 +101,30 @@ export function SectionHero() {
                   <img src={IconClassification} alt="público" />
                   <span>Violência<br /> Compras no jogo</span>
                </div>
-               <div className="home-hero_videos">
-                  {
-                     videoList.map(({ thumbnail, alt, video }: videoListProps, index: number) => {
-                        return (
-                           <HeroVideoToggle
-                              key={`Video-hero-${index}`}
-                              thumbnail={thumbnail}
-                              active={currentVideoButton === index ? 'is-active' : ''}
-                              alt={alt}
-                              onClick={
-                                 () => {
-                                    handleButtonVideo(index)
-                                    handleVideo(video)
-                                 }
-                              }
-                           />
-                        )
-                     })
-                  }
-               </div>
+               {
+                  window.innerWidth > screenWidth.laptop && (
+                     <div className="home-hero_videos">
+                        {
+                           videoList.slice(0, 2).map(({ thumbnail, alt, video }: videoListProps, index: number) => {
+                              return (
+                                 <HeroVideoToggle
+                                    key={`Video-hero-${index}`}
+                                    thumbnail={thumbnail}
+                                    active={currentVideoButton === index ? 'is-active' : ''}
+                                    alt={alt}
+                                    onClick={
+                                       () => {
+                                          handleButtonVideo(index)
+                                          handleVideo(video)
+                                       }
+                                    }
+                                 />
+                              )
+                           })
+                        }
+                     </div>
+                  )
+               }
             </div>
          </div>
 

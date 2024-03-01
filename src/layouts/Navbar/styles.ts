@@ -10,6 +10,10 @@ export const NavMenu = styled.nav`
    background-color: var(--gray-dark-01);
    min-height: 4.5rem;
    z-index: 999;
+
+   ${breakPoints.tablet}{
+      padding: 1.5rem 0;
+   }
    
    .container-medium{
       display: flex;

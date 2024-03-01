@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { breakPoints } from "./utils/media";
 
 export const GlobalStyles = createGlobalStyle`
 :root {
@@ -138,6 +139,34 @@ h6, .h6 {
 }
 .subhead.tiny {
   font-size: 0.75rem;
+}
+
+${breakPoints.laptop}{
+    h1, .h1 {
+    font-size: 3.25rem;
+  }
+  
+  h2, .h2 {
+    font-size: 2.75rem;
+  }
+
+  h3, .h3 {
+    font-size: 2.25rem;
+  }
+}
+
+${breakPoints.tablet}{
+    h1, .h1 {
+    font-size: 3rem;
+  }
+  
+  h2, .h2 {
+    font-size: 2rem;
+  }
+
+  h3, .h3 {
+    font-size: 2rem;
+  }
 }
 
 .container-medium{
