@@ -29,6 +29,7 @@ export const SectionIntroduceStyled = styled.section`
    ${breakPoints.tablet}{
       height: 27rem;
       padding: 2rem 0;
+      top: 4.5rem;
    }
 
    @keyframes introduce-bg {
