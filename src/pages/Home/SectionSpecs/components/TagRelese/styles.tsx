@@ -1,3 +1,4 @@
+import { breakPoints } from "@/utils/media";
 import styled from "styled-components";
 
 export const TagReleseStyled = styled.div`
@@ -25,5 +26,10 @@ export const TagReleseStyled = styled.div`
       align-items: center;
       justify-content: center;
       gap: 1.5rem;
+
+      ${breakPoints.tablet}{
+         gap: 0.75rem;
+         padding: 0 1rem 0 0.875rem ;
+      }
    }
 `

@@ -9,7 +9,7 @@ import IconCorner03 from "@/assets/border-3.svg"
 import IconCorner04 from "@/assets/border-4.svg"
 
 interface CardVideoProps {
-  // video?: string,
+  // //video?: string,
    thumbnail: string,
    alt: string,
    title: string,

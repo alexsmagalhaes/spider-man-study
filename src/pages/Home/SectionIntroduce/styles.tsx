@@ -10,6 +10,7 @@ import BgImage05 from "@/assets/bg/05.png"
 import BgImage06 from "@/assets/bg/06.png"
 import BgImage07 from "@/assets/bg/07.png"
 import BgImage08 from "@/assets/bg/08.png"
+import { breakPoints } from "@/utils/media";
 
 export const SectionIntroduceStyled = styled.section`
    position: sticky;
@@ -24,6 +25,11 @@ export const SectionIntroduceStyled = styled.section`
    background-size: cover;
    transition: background-image .3s ease;
    animation: introduce-bg 8s infinite linear;
+
+   ${breakPoints.tablet}{
+      height: 27rem;
+      padding: 2rem 0;
+   }
 
    @keyframes introduce-bg {
       0% {
@@ -74,6 +80,8 @@ export const SectionIntroduceStyled = styled.section`
          display: flex;
          flex-direction: column;
          align-items: center;
+         position: relative;
+         z-index: 2;
 
          h2 {
             margin-bottom: 0.5rem;
@@ -83,6 +91,11 @@ export const SectionIntroduceStyled = styled.section`
             margin-bottom: 4.5rem;
             font-size: 1.125rem;
             color: var(--gray-light-02);
+
+            ${breakPoints.tablet}{
+               font-size: 1rem;
+               margin-bottom: 3.5rem;
+            }
          }
 
          .home-introduce_arrow-wrap {

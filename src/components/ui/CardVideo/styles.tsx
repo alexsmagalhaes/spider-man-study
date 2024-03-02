@@ -1,3 +1,4 @@
+import { breakPoints } from "@/utils/media";
 import styled from "styled-components";
 
 export type Size = 'medium' | 'large'
@@ -5,6 +6,7 @@ export type Size = 'medium' | 'large'
 export const CardVideoStyled = styled.div`
    color: var(--gray-light-01);
    transition: all 250ms ease;
+   will-change: transform; 
 
    &.large{
       color: var(--white-default);
@@ -44,6 +46,11 @@ export const CardVideoStyled = styled.div`
          opacity: 0;
          margin-top: 1.5rem;
          z-index: 1;
+
+         ${breakPoints.tablet}{
+            opacity: 1;
+            margin-top: 0;
+         }
       }
       .border-image{
          position: absolute;
@@ -51,6 +58,10 @@ export const CardVideoStyled = styled.div`
          z-index: 1;
          opacity: .16;
          transition: all 250ms ease;
+
+         ${breakPoints.tablet}{
+            display: none;
+         }
 
          &.large{
             opacity: 1;

@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 //assets
 import BgCard from '@/assets/benefits-bg.jpg'
+import { breakPoints } from "@/utils/media";
 
 export const CardSpiderManStyled = styled.div`
    position: relative;
@@ -13,6 +14,15 @@ export const CardSpiderManStyled = styled.div`
    align-items: center;
    grid-column: 3;
    grid-row: 1;
+
+   ${breakPoints.laptop}{
+      grid-column: 2;
+      grid-row: 1;
+   }
+
+   ${breakPoints.tablet}{
+      height: 16rem;
+   }
 
    .home-benefit_filter{
       background: rgba(0,0,10, 0.5);
@@ -36,5 +46,17 @@ export const CardSpiderManStyled = styled.div`
       bottom: 0;
       left: -15.5%;
       position: absolute;
+
+      ${breakPoints.laptop}{
+         min-width: 80%;
+         left: auto;
+      }
+
+      ${breakPoints.tablet}{
+         min-width: auto;
+         width: auto;
+         max-height: 96%;
+         left: auto;
+      }
    }
 `

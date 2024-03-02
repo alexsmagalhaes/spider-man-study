@@ -1,3 +1,4 @@
+import { breakPoints } from "@/utils/media";
 import styled from "styled-components";
 
 export const CardPriceStyled = styled.div`
@@ -9,6 +10,11 @@ export const CardPriceStyled = styled.div`
    align-items: center;
    justify-content: center;
    gap: 3rem;
+
+   ${breakPoints.tablet}{
+      padding: 1.625rem;
+      gap: 1.5rem;
+   }
 
    .price-card_heading{
       width: 100%;

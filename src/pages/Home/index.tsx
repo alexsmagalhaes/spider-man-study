@@ -6,6 +6,7 @@ import { SectionSlider } from "./SectionSlides";
 import { SectionSpecs } from "./SectionSpecs";
 import { SectionIntroduce } from "./SectionIntroduce";
 import { SectionHero } from "./SectionHero";
+import { screenWidth } from "@/utils/media";
 
 //assets
 import Divider02 from '@/assets/line-2.svg'
@@ -18,7 +19,10 @@ export default function Home() {
          <SectionSlider />
          <SectionIntroduce />
          <SectionEditions />
-         <DividerBlock image={Divider03} />
+         {
+            (window.innerWidth > screenWidth.tablet) &&
+            <DividerBlock image={Divider03} />
+         }
          <SectionBenefits />
          <SectionGameplay />
          <DividerBlock image={Divider02} />
