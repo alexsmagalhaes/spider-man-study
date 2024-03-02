@@ -2,7 +2,6 @@ import { ReactNode } from "react";
 import { SectionSpecsStyled } from "./styles";
 import { CardPrice } from "./components/CardPrice";
 import { TagRelese } from "./components/TagRelese";
-import { screenWidth } from "@/utils/media";
 
 //assets
 import SpiderManImage from '@/assets/specs-spider-image.jpg'
