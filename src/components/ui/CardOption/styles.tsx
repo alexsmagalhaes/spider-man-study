@@ -1,3 +1,4 @@
+import { breakPoints } from "@/utils/media";
 import styled from "styled-components";
 
 export const CardOptionStyled = styled.div`
@@ -9,6 +10,10 @@ export const CardOptionStyled = styled.div`
    justify-content: space-between;
    position: relative;
    transition: all 250ms ease;
+
+   ${breakPoints.tablet}{
+      padding: 2rem 1.75rem;
+   }
 
    &:hover{
       background: var(--gray-dark-03);
@@ -88,6 +93,10 @@ export const CardOptionStyled = styled.div`
       flex-direction: column;
       align-items: flex-start;
       gap: 1.5rem;
+
+      ${breakPoints.tablet}{
+         margin-top: 1rem;
+      }
 
       h3{
          color: var(--white-default);
