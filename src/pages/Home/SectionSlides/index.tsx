@@ -54,7 +54,7 @@ export function SectionSlider(): ReactNode {
 
             <Swiper
                className="swiper_slide-wrapper"
-               spaceBetween={28}
+               spaceBetween={16}
                slidesPerView={"auto"}
                speed={800}
                autoplay={{ delay: 4000, disableOnInteraction: true }}
@@ -75,6 +75,15 @@ export function SectionSlider(): ReactNode {
                   nextEl: nextRef.current,
                   disabledClass: 'disable',
                }}
+
+               breakpoints={
+                  {
+                     768: {
+                        spaceBetween: 28,
+                     }
+                  }
+               }
+
                onBeforeInit={() => setInit(true)}
             >
                <div className="slide-trailers_control is-01" ref={prevRef}>
