@@ -37,10 +37,13 @@ export const SectionBenefitsStyled = styled.section`
          gap: 0.5rem;
          display: flex;
          margin-bottom: 1.5rem;
+         overflow: auto;
+         min-width: 100dvw;
+         padding-right: 3rem;
 
          div {
             min-width: 90%;
-         }
       }
+   }
 }
 `

@@ -30,6 +30,14 @@ export const SectionHeroStyled = styled.header`
       ${breakPoints.laptop}{
          width: 220%;
       }
+
+      ${breakPoints.tablet}{
+         width: 280%;
+      }
+
+      ${breakPoints.mobile}{
+         width: 400%;
+      }
    }
 
    .home-hero_filter-video{

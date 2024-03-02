@@ -35,6 +35,10 @@ export const SectionSliderStyled = styled.section`
 
          .swiper_slide-wrap{
             max-width: 24rem;
+
+            ${breakPoints.tablet}{
+               max-width: 90%;
+            }
          }
 
          .slide-trailers_control{

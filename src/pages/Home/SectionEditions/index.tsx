@@ -36,13 +36,15 @@ export function SectionEditions(): ReactNode {
       <SectionEditionsStyled>
          <div className="container-medium">
             <div className="home-edition_block">
-               <Tag textBase="Edição disponível" />
-               <h2 className="h3">Disponível na playstation store</h2>
-               <h3 className="subhead large">SEJAM MELHORES. JUNTOS.</h3>
-               <div className="home-edition_detail">
-                  {[...Array(9)].map((_, index) => (
-                     <img key={`Home-detail-${index}`} src={IconLine} alt="detail" />
-                  ))}
+               <div>
+                  <Tag textBase="Edição disponível" />
+                  <h2 className="h3">Disponível na playstation store</h2>
+                  <h3 className="subhead large">SEJAM MELHORES. JUNTOS.</h3>
+                  <div className="home-edition_detail">
+                     {[...Array(9)].map((_, index) => (
+                        <img key={`Home-detail-${index}`} src={IconLine} alt="detail" />
+                     ))}
+                  </div>
                </div>
                <div className="home-edition_spiders-wrap">
                   <div className="home-edition_image-filter"></div>
@@ -51,7 +53,7 @@ export function SectionEditions(): ReactNode {
                </div>
             </div>
             <CardOption edition={"default"} price={"349,90"} items={listBenefits[0].values} />
-            <CardOption edition={"deluxe"} price={"399,50"} items={listBenefits[1].values} />
+            <div className="home-edition_deluxe"><CardOption edition={"deluxe"} price={"399,50"} items={listBenefits[1].values} /></div>
          </div>
       </SectionEditionsStyled>
    )

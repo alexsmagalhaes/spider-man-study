@@ -16,11 +16,15 @@ export const FooterStyled = styled.nav`
       justify-content: space-between;
 
       ${breakPoints.laptop}{
+         gap: 1.5rem;
+      }
+
+      ${breakPoints.tablet}{
          flex-direction: column;
-         align-items: center;
-         text-align: center;
-         padding-top: 2.5rem;
-         padding-bottom: 2.5rem;
+         align-items: start;
+         padding-top: 3rem;
+         padding-bottom: 3rem;
+         gap: 3rem;
       }
       
       .footer_line{
@@ -30,6 +34,10 @@ export const FooterStyled = styled.nav`
          right: 1.5rem;
          left: 1.5rem;
          /* min-width: 68rem; */
+
+         ${breakPoints.tablet}{
+            display: none;
+         }
       }
 
       .footer_content{
@@ -39,9 +47,9 @@ export const FooterStyled = styled.nav`
          gap: 0.75rem;
          align-items: start;
 
-         ${breakPoints.laptop}{
+         /* ${breakPoints.laptop}{
             align-items: center;
-         }
+         } */
 
          p{
             color: var(--gray-light-02);

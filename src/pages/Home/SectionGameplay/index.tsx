@@ -56,13 +56,21 @@ export function SectionGameplay(): ReactNode {
 
             <Swiper
                className="swiper-gameplay_slide"
-               spaceBetween={80}
+               spaceBetween={28}
                slidesPerView={"auto"}
                speed={800}
                autoplay={{ delay: 4000, disableOnInteraction: true }}
                grabCursor={true}
                autoHeight={true}
                centeredSlides
+
+               breakpoints={
+                  {
+                     768: {
+                        spaceBetween: 80,
+                     }
+                  }
+               }
 
                effect={"coverflow"}
                coverflowEffect={

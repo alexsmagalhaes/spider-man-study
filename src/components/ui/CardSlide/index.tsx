@@ -2,6 +2,9 @@ import { ReactNode } from "react";
 import { CardSlideStyled } from "./styles";
 import { BorderDetail } from "../BorderDetail";
 
+//assets
+import IconPlay from "@/assets/play.svg"
+
 interface CardSlideProps {
    image: string,
    alt: string,
@@ -12,7 +15,10 @@ export function CardSlide({ image, alt, title }: CardSlideProps): ReactNode {
    return (
       <CardSlideStyled>
          <div className="slide_wrap">
-            <BorderDetail />
+            <img className={`button-play medium`} src={IconPlay} alt="play video" />
+            <div className="slide_border-detail">
+               <BorderDetail />
+            </div>
             <img className={`thumbnail-image`} src={image} alt={alt} />
             <div className="filter"></div>
          </div>

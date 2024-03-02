@@ -24,13 +24,23 @@ export const SectionEditionsStyled = styled.section`
          display: flex;
          flex-direction: column;
          gap: 2rem;
+      }
 
-         div:nth-child(3){
+      .home-edition_deluxe {
+         display: flex;
+
+         ${breakPoints.tablet}{
             margin-top: 1.5rem;
+            flex-direction: column;
          }
       }
 
-      h2{
+      .home-edition_block{
+         display: flex;
+         justify-content: space-between;
+         flex-direction: column;
+
+         h2{
          margin-top: 2rem;
          margin-bottom: 1rem;
 
@@ -55,6 +65,7 @@ export const SectionEditionsStyled = styled.section`
       }
 
       .home-edition_spiders-wrap{
+         margin-top: auto;
          position: relative;
          display: flex;
          align-items: center;
@@ -70,7 +81,14 @@ export const SectionEditionsStyled = styled.section`
          .home-edition_image{
             object-fit: cover;
             width: 100%;
+
+            ${breakPoints.tablet}{
+               max-height: 13.25rem;
+            }
          }
       }
+      }
+
+      
    }
 `
