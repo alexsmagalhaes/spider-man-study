@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 import { SectionBenefitsStyled } from "./styles";
 import { CardBenefit } from "@/components/ui/CardBenefit";
 import { CardSpiderMan } from "./components/CardSpiderMan";
+import { screenWidth } from "@/utils/media";
 
 //assets
 import IconBenefit01 from "@/assets/benefit-icon-1.svg"
@@ -49,7 +50,9 @@ export function SectionBenefits(): ReactNode {
                <h2 className="h3">características de um jogo único</h2>
             </div>
             <div className="home-benefits_grid">
-               <CardSpiderMan />
+               {
+                  (window.innerWidth > screenWidth.tablet) && <CardSpiderMan />
+               }
                {
                   benefitsItems.map(({ icon, title, description }: benefitsItem, index: number) => {
                      return (
@@ -63,6 +66,9 @@ export function SectionBenefits(): ReactNode {
                   })
                }
             </div>
+            {
+               (window.innerWidth < screenWidth.tablet) && <CardSpiderMan />
+            }
          </div>
       </SectionBenefitsStyled>
    )
