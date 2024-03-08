@@ -62,7 +62,6 @@ export function SectionGameplay(): ReactNode {
                autoplay={{ delay: 4000, disableOnInteraction: true }}
                grabCursor={true}
                centeredSlides
-
                breakpoints={
                   {
                      768: {
