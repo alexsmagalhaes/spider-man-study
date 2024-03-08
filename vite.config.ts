@@ -57,8 +57,7 @@ export default defineConfig({
           // https://sharp.pixelplumbing.com/api-output#avif
           lossless: true,
         },
-        cache: false,
-        cacheLocation: '',
+        cache: true,
       }
     ),
   ],
