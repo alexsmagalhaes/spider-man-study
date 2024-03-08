@@ -23,6 +23,7 @@ export default function Home() {
          <Helmet>
             <title>{title}</title>
             <meta content={description} name="description"></meta>
+            <meta name="description" content={description}></meta>
             <link href="images/favicon.jpg" rel="shortcut icon" type="image/x-icon"></link>
 
             <meta content={title} property="og:title"></meta>
