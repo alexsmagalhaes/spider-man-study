@@ -9,9 +9,7 @@ export default defineConfig({
     react(),
     ViteImageOptimizer(
       {
-        test: /\.(jpe?g|png|gif|tiff|webp|svg|avif)$/i,
-        exclude: '',
-        include: '',
+        test: '/\.(jpe?g|png|gif|tiff|webp|svg|avif)$/i',
         includePublic: true,
         logStats: true,
         ansiColors: true,
