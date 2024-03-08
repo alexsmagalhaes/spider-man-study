@@ -10,8 +10,8 @@ export default defineConfig({
     ViteImageOptimizer(
       {
         test: /\.(jpe?g|png|gif|tiff|webp|svg|avif)$/i,
-        exclude: undefined,
-        include: undefined,
+        exclude: '',
+        include: '',
         includePublic: true,
         logStats: true,
         ansiColors: true,
@@ -25,32 +25,26 @@ export default defineConfig({
                   cleanupNumericValues: false,
                   removeViewBox: false, // https://github.com/svg/svgo/issues/1128
                 },
-              },
-            },
-            'sortAttrs',
-            {
-              name: 'addAttributesToSVGElement',
-              params: {
-                attributes: [{ xmlns: 'http://www.w3.org/2000/svg' }],
+
               },
             },
           ],
         },
         png: {
           // https://sharp.pixelplumbing.com/api-output#png
-          quality: 90,
+          quality: 100,
         },
         jpeg: {
           // https://sharp.pixelplumbing.com/api-output#jpeg
-          quality: 90,
+          quality: 100,
         },
         jpg: {
           // https://sharp.pixelplumbing.com/api-output#jpeg
-          quality: 90,
+          quality: 100,
         },
         tiff: {
           // https://sharp.pixelplumbing.com/api-output#tiff
-          quality: 90,
+          quality: 100,
         },
         // gif does not support lossless compression
         // https://sharp.pixelplumbing.com/api-output#gif
@@ -63,8 +57,8 @@ export default defineConfig({
           // https://sharp.pixelplumbing.com/api-output#avif
           lossless: true,
         },
-        cache: true,
-        cacheLocation: undefined,
+        cache: false,
+        cacheLocation: '',
       }
     ),
   ],
