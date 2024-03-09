@@ -65,8 +65,8 @@ export default defineConfig({
         // AVIF optimization settings
         lossless: true,
       },
-      cache: false, // Disable caching
-      cacheLocation: undefined, // Let the plugin handle cache location
+      cache: true, // Enable caching
+      cacheLocation: 'node_modules/.cache/vite-plugin-image-optimizer' // Let the plugin handle cache location
     }),
   ],
   resolve: {
