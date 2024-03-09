@@ -3,7 +3,6 @@ import react from '@vitejs/plugin-react-swc'
 import path from 'path'
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer'
 
-const qualityRate = 90
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -41,19 +40,19 @@ export default defineConfig({
       },
       png: {
         // PNG optimization settings
-        quality: 90,
+        quality: 100,
       },
       jpeg: {
         // JPEG optimization settings
-        quality: 90,
+        quality: 100,
       },
       jpg: {
         // JPG optimization settings
-        quality: 90,
+        quality: 100,
       },
       tiff: {
         // TIFF optimization settings
-        quality: 90,
+        quality: 100,
       },
       // GIF optimization settings
       gif: {},
@@ -65,7 +64,7 @@ export default defineConfig({
         // AVIF optimization settings
         lossless: true,
       },
-      cache: true, // Disable caching
+      cache: false, // Disable caching
       cacheLocation: undefined, // Let the plugin handle cache location
     }),
   ],
