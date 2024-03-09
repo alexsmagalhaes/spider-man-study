@@ -9,42 +9,64 @@ export default defineConfig({
   plugins: [
     react(),
     ViteImageOptimizer({
+      // File types to optimize
       test: /\.(jpe?g|png|gif|tiff|webp|svg|avif)$/i,
       exclude: undefined,
       include: undefined,
       includePublic: true,
       logStats: true,
       ansiColors: true,
+      svg: {
+        multipass: true,
+        plugins: [
+          {
+            name: 'preset-default',
+            params: {
+              overrides: {
+                cleanupNumericValues: false,
+                removeViewBox: false, // https://github.com/svg/svgo/issues/1128
+              },
+              floatPrecision: 2, // Adjust as needed
+            },
+          },
+          'sortAttrs',
+          {
+            name: 'addAttributesToSVGElement',
+            params: {
+              attributes: [{ xmlns: 'http://www.w3.org/2000/svg' }],
+            },
+          },
+        ],
+      },
       png: {
-        // https://sharp.pixelplumbing.com/api-output#png
-        quality: 90,
+        // PNG optimization settings
+        quality: 100,
       },
       jpeg: {
-        // https://sharp.pixelplumbing.com/api-output#jpeg
-        quality: 90,
+        // JPEG optimization settings
+        quality: 100,
       },
       jpg: {
-        // https://sharp.pixelplumbing.com/api-output#jpeg
-        quality: 90,
+        // JPG optimization settings
+        quality: 100,
       },
       tiff: {
-        // https://sharp.pixelplumbing.com/api-output#tiff
-        quality: 90,
+        // TIFF optimization settings
+        quality: 100,
       },
-      // gif does not support lossless compression
-      // https://sharp.pixelplumbing.com/api-output#gif
+      // GIF optimization settings
       gif: {},
       webp: {
-        // https://sharp.pixelplumbing.com/api-output#webp
+        // WebP optimization settings
         lossless: true,
       },
       avif: {
-        // https://sharp.pixelplumbing.com/api-output#avif
+        // AVIF optimization settings
         lossless: true,
       },
-      cache: true,
-      cacheLocation: undefined,
-    })
+      cache: false, // Disable caching
+      cacheLocation: undefined, // Let the plugin handle cache location
+    }),
   ],
   resolve: {
     alias: {
