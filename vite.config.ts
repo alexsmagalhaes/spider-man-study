@@ -66,7 +66,7 @@ export default defineConfig({
         lossless: true,
       },
       cache: true, // Enable caching
-      cacheLocation: 'node_modules/.cache/vite-plugin-image-optimizer' // Let the plugin handle cache location
+      cacheLocation: '/' // Let the plugin handle cache location
     }),
   ],
   resolve: {
