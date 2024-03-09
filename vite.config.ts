@@ -65,7 +65,7 @@ export default defineConfig({
         // AVIF optimization settings
         lossless: true,
       },
-      cache: true, // Disable caching
+      cache: false, // Disable caching
       cacheLocation: undefined, // Let the plugin handle cache location
     }),
   ],
